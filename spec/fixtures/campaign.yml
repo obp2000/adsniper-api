@@ -1,0 +1,14 @@
+name: test # string
+campaign_status: 1 # integer
+url: 'http://nectarin.ru' # string
+lifetime_budget: -1 # float
+#start_time # timestamp
+#end_time # timestamp
+#optimization_strategy # int
+#max_cpm # float
+#max_cpa # float
+#max_cpc # float
+#limit_of_shows # int
+#number_of_shows # int
+#ssp # string
+#daily_budget

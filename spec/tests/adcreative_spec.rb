@@ -5,12 +5,13 @@ describe Adsniper::Api::Models::Adcreative do
   before(:all) do
     @campaign = Adsniper::Api::Models::Campaign.new(api_key: MainHelper.api_key).create MainHelper.load_fixture(:campaign)
     @adcreatives = Adsniper::Api::Models::Adcreative.new(parent: @campaign)
+    @adcreatives.each(&:delete)
     @first = @adcreatives.first
   end
 
   after(:all) do
-    #@adcreatives.each(&:delete)
-    #@campaign.delete
+    @adcreatives.each(&:delete)
+    @campaign.delete
   end
 
   it '#create' do
@@ -19,7 +20,7 @@ describe Adsniper::Api::Models::Adcreative do
   end
 
   it '#read' do
-    expect(@first.read.attributes).to include(name: 'test')
+    expect(@first.read.attributes).to include(name: 'adcreative_test')
   end
 
   it '#update' do
@@ -27,13 +28,17 @@ describe Adsniper::Api::Models::Adcreative do
     expect(@first.read.attributes).to include(name: 'update_test')
   end
 
+  it '#statistics' do
+    expect(@first.statistics).to be_a_kind_of(Hash)
+  end
+
   it '#all' do
     expect(@adcreatives.all).to be_a_kind_of(Array)
   end
 
   it '#delete' do
-    #@adcreatives.each(&:delete)
-    #expect(@adcreatives.size!).to eq(0)
+    @adcreatives.each(&:delete)
+    expect(@adcreatives.size!).to eq(0)
   end
 
 end

@@ -10,4 +10,8 @@ describe Adsniper::Api::Models::Demographic do
     expect(@demographics.all).to be_a_kind_of(Hash)
   end
 
+  it '#continents' do
+    expect(@demographics.continents).to be_a_kind_of(Array)
+  end
+
 end

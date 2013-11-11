@@ -6,7 +6,7 @@ module Adsniper
         @@_required_attrs = []
 
         def default_url
-          "#{Adsniper::Api::BASE_URL}#{parent_url}/#{entity_name}s"
+          "#{parent_url}/#{entity_name}s"
         end
 
         def set_api_key api_key
@@ -51,15 +51,16 @@ module Adsniper
         end
 
         def make_url
-          @url ||= default_url
+          @url ||= "#{Adsniper::Api::BASE_URL}#{default_url}"
         end
 
         def check_required_params
           raise 'undefined required attribute "id"' if [:read,:update,:delete].include? @_method and @id.nil?
-          required = self.class.check_attrs(@_request)
-
-          unless required.size == 0
-              raise "undefined required attributes '#{required.join(',')}'"
+          if [:create,:update].include? @_method
+            required = self.class.check_attrs(@_request)
+            unless required.size == 0
+                raise "undefined required attributes '#{required.join(',')}'"
+            end
           end
         end
 
@@ -84,7 +85,7 @@ module Adsniper
         end
 
         def before_request
-          ap @_method if Adsniper::Api::DEBUG
+          ap "#{@_method} - #{default_url}" if Adsniper::Api::DEBUG
         end
 
         def after_response

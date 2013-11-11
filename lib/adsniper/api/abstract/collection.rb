@@ -20,7 +20,7 @@ module Adsniper
         def all!
           @_method  = :all
           request do
-            RestClient.get("#{@url}", params: {api_key: @api_key, limit: @limit, offset: @offset})
+            RestClient.get("#{@url}", params: {api_key: @api_key, limit: @limit, offset: @offset}, timeout: self.class::MAX_TIMEOUT)
           end
           @_all = collection_method
           @update_all = false

@@ -2,6 +2,8 @@
 module Adsniper
   module Api
     class Abstract
+      MAX_TIMEOUT = 30
+
       include Adsniper::Api::Abstract::Helper
       include Adsniper::Api::Abstract::Parent
       include Adsniper::Api::Abstract::Collection

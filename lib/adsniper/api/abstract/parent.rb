@@ -6,7 +6,7 @@ module Adsniper
         attr_accessor :_parent, :_parent_url
 
         def parent_required?
-          if defined? self.class::PARENT_REQUIRED and @_parent.nil?
+          if defined? self.class::PARENT_REQUIRED and (@_parent.nil? and @_parent_url.nil?)
             raise 'Please, set parent entity'
           end
         end

@@ -8,7 +8,7 @@ module Adsniper
         end
 
         def default_url
-          "#{Adsniper::Api::BASE_URL}#{parent_url}/#{entity_name}"
+          "/#{parent_url}/#{entity_name}"
         end
       end
     end

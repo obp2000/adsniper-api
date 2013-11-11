@@ -5,6 +5,11 @@ module Adsniper
         def collection_method
           Hashie::Mash.new(@response)
         end
+
+        def continents
+          ap all.keys
+        end
+
       end
     end
   end

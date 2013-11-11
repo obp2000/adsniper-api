@@ -9,7 +9,7 @@ module Adsniper
           @_request = params
 
           request do
-            RestClient.post(@url, @_request)
+            RestClient.post(@url, @_request, timeout: self.class::MAX_TIMEOUT)
           end
 
           self.class.new(params_for_new_instance extract_entity(@response))
@@ -19,7 +19,7 @@ module Adsniper
           @id = id
           @_method = :read
           request do
-            RestClient.get("#{@url}/#{@id}", params: {api_key: @api_key})
+            RestClient.get("#{@url}/#{@id}", params: {api_key: @api_key}, timeout: self.class::MAX_TIMEOUT)
           end
           @_arguments.merge! Hashie::Mash.new(extract_entity(@response))
           self
@@ -29,7 +29,7 @@ module Adsniper
           @_method  = :update
           @_request = params
           request do
-            RestClient.put("#{@url}/#{@id}", @_request)
+            RestClient.put("#{@url}/#{@id}", @_request, timeout: self.class::MAX_TIMEOUT)
           end
 
           self.class.new(params_for_new_instance extract_entity(@response))
@@ -39,7 +39,7 @@ module Adsniper
           @id = id
           @_method  = :delete
           request do
-            RestClient.delete("#{@url}/#{@id}", :params => {api_key: @api_key})
+            RestClient.delete("#{@url}/#{@id}", :params => {api_key: @api_key}, timeout: self.class::MAX_TIMEOUT)
           end
         end
       end

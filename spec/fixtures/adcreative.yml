@@ -1,4 +1,4 @@
 name: adcreative_test
 type: 2
-file: '@http://nectarin.ru/ms_banner.jpeg'
+file: 'http://nectarin.ru/ms_banner.jpeg'
 size: 100x100

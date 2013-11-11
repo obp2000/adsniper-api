@@ -5,6 +5,9 @@ describe Adsniper::Api::Models::Rubric do
   before(:all) do
     @campaign = Adsniper::Api::Models::Campaign.new(api_key: MainHelper.api_key).create MainHelper.load_fixture(:campaign)
     @statistics = Adsniper::Api::Models::Statistic.new(parent: @campaign)
+
+    @adcreative = Adsniper::Api::Models::Adcreative.new(api_key: MainHelper.api_key, parent: @campaign).create MainHelper.load_fixture(:adcreative)
+    @ad_statistics = Adsniper::Api::Models::Statistic.new(parent: @adcreative)
   end
 
   after(:all) do
@@ -13,6 +16,10 @@ describe Adsniper::Api::Models::Rubric do
 
   it '#all' do
     expect(@statistics.all).to be_a_kind_of(Hash)
+  end
+
+  it '#all for adcreative' do
+    expect(@ad_statistics.all).to be_a_kind_of(Hash)
   end
 
 end

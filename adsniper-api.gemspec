@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec-expectations"
   #spec.add_development_dependency "factory_girl", "~> 4.0"
-  spec.add_development_dependency "rest-client", "~> 1.6.7"
-  spec.add_development_dependency "hashie", "~> 2.0.5"
+  spec.add_dependency "rest-client", "~> 1.6.7"
+  spec.add_dependency "hashie", "~> 2.0.5"
   spec.add_development_dependency "awesome_print"
 
 end

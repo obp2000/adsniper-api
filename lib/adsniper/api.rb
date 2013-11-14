@@ -16,6 +16,7 @@ require "adsniper/api/models/device"
 require "adsniper/api/models/rubric"
 require "adsniper/api/models/targeting"
 require "adsniper/api/models/statistic"
+require "adsniper/api/client"
 
 module Adsniper
   module Api

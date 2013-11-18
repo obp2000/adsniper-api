@@ -16,6 +16,10 @@ module Adsniper
           Adsniper::Api::Models::Targeting.new(parent: self)
         end
 
+        def parent_url
+          ''
+        end
+
       end
     end
   end

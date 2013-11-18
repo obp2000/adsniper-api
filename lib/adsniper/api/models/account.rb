@@ -12,6 +12,13 @@ module Adsniper
           end
         end
 
+        def sub_accounts
+          Adsniper::Api::Models::SubAccount.new(parent: self)
+        end
+
+        def campaigns
+          Adsniper::Api::Models::Campaign.new(parent: self)
+        end
       end
     end
   end

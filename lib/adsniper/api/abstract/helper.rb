@@ -6,7 +6,7 @@ module Adsniper
         @@_required_attrs = []
 
         def default_url
-          "#{parent_url}/#{entity_name}s"
+          "#{parent_url}#{entity_name}s"
         end
 
         def set_api_key api_key

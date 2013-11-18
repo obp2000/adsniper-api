@@ -18,7 +18,7 @@ module Adsniper
 
         def parent_url
           if !@_parent.nil?
-            "/#{@_parent.class.name.split('::').last.downcase}s/#{@_parent.id}"
+            "#{@_parent.class.name.split('::').last.downcase}s/#{@_parent.id}/"
           elsif !@_parent_url.nil?
             @_parent_url
           else

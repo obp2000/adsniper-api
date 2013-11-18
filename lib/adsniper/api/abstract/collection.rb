@@ -8,7 +8,7 @@ module Adsniper
         attr_accessor :_all, :limit, :offset
 
         def collection_method
-          unless @response[collection_namespace].nil? and @response[collection_namespace].size == 0
+          unless (@response[collection_namespace].nil? and @response[collection_namespace].size == 0)
             @response[collection_namespace].map{|v|
               self.class.new(params_for_new_instance(v[entity_name])) }
           else

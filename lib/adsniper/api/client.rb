@@ -10,11 +10,11 @@ module Adsniper
       end
 
       def create_account email, password
-
+        account.sub_accounts.create(email: email, login: email, password: password)
       end
 
-      def campaigns
-
+      def account
+        Adsniper::Api::Models::Account.new(hash_for_init).first
       end
 
       def geo

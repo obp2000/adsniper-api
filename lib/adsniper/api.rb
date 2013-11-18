@@ -9,6 +9,7 @@ require "adsniper/api/abstract/crud"
 require "adsniper/api/abstract/collection"
 require "adsniper/api/abstract"
 require "adsniper/api/models/account"
+require "adsniper/api/models/sub_account"
 require "adsniper/api/models/campaign"
 require "adsniper/api/models/adcreative"
 require "adsniper/api/models/demographic"
@@ -20,7 +21,7 @@ require "adsniper/api/client"
 
 module Adsniper
   module Api
-    BASE_URL = 'http://mediasniper.ru/api'
+    BASE_URL = 'http://mediasniper.ru/api/'
     DEBUG = true
     SHOW_REQUESTS = true
   end

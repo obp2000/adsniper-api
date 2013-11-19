@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::Rubric do
+describe Adsniper::Api::Models::Statistic do
 
   before(:all) do
     @campaign = Adsniper::Api::Models::Campaign.new(api_key: MainHelper.api_key).create MainHelper.load_fixture(:campaign)

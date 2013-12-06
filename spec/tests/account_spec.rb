@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::Account do
+describe Mediasniper::Api::Models::Account do
 
   before do
-    @account = Adsniper::Api::Models::Account.new(api_key: MainHelper.api_key)
+    @account = Mediasniper::Api::Models::Account.new(api_key: MainHelper.api_key)
   end
 
   it '#all' do

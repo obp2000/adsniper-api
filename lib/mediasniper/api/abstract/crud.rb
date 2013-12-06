@@ -1,5 +1,5 @@
 # coding: utf-8
-module Adsniper
+module Mediasniper
   module Api
     class Abstract
       module Crud

@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in adsniper-api.gemspec
+# Specify your gem's dependencies in mediasniper-api.gemspec
 gemspec

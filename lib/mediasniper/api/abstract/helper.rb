@@ -1,5 +1,5 @@
 # coding: utf-8
-module Adsniper
+module Mediasniper
   module Api
     class Abstract
       module Helper
@@ -51,7 +51,7 @@ module Adsniper
         end
 
         def make_url
-          @url ||= "#{Adsniper::Api::BASE_URL}#{default_url}"
+          @url ||= "#{Mediasniper::Api::BASE_URL}#{default_url}"
         end
 
         def check_required_params
@@ -85,11 +85,11 @@ module Adsniper
         end
 
         def before_request
-          ap "#{@_method} - #{default_url}" if Adsniper::Api::DEBUG
+          ap "#{@_method} - #{default_url}" if Mediasniper::Api::DEBUG
         end
 
         def after_response
-          ap @response if Adsniper::Api::DEBUG
+          ap @response if Mediasniper::Api::DEBUG
         end
 
         def request

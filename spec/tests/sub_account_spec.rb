@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::SubAccount do
+describe Mediasniper::Api::Models::SubAccount do
 
   ###
   # Sub Account - it is an account, so he has his own api-key.
@@ -10,7 +10,7 @@ describe Adsniper::Api::Models::SubAccount do
   #TODO
 
   before(:all) do
-    @account = Adsniper::Api::Models::Account.new(api_key: MainHelper.api_key).first
+    @account = Mediasniper::Api::Models::Account.new(api_key: MainHelper.api_key).first
     @sub_accounts = @account.sub_accounts
   end
 
@@ -25,7 +25,7 @@ describe Adsniper::Api::Models::SubAccount do
   end
 
   it '#read' do
-    #expect(@sub_accounts.first).to be_a_kind_of(Adsniper::Api::Models::Account)
+    #expect(@sub_accounts.first).to be_a_kind_of(Mediasniper::Api::Models::Account)
     #expect(@sub_accounts.read(@sub_accounts.first.id).attributes).to include(:login)
   end
 

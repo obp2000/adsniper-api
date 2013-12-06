@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::Rubric do
+describe Mediasniper::Api::Models::Rubric do
 
   before(:all) do
-    @rubrics = Adsniper::Api::Models::Rubric.new(api_key: MainHelper.api_key)
+    @rubrics = Mediasniper::Api::Models::Rubric.new(api_key: MainHelper.api_key)
   end
 
   it '#all' do

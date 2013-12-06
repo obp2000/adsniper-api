@@ -1,13 +1,13 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::Statistic do
+describe Mediasniper::Api::Models::Statistic do
 
   before(:all) do
-    @campaign = Adsniper::Api::Models::Campaign.new(api_key: MainHelper.api_key).create MainHelper.load_fixture(:campaign)
-    @statistics = Adsniper::Api::Models::Statistic.new(parent: @campaign)
+    @campaign = Mediasniper::Api::Models::Campaign.new(api_key: MainHelper.api_key).create MainHelper.load_fixture(:campaign)
+    @statistics = Mediasniper::Api::Models::Statistic.new(parent: @campaign)
 
-    @adcreative = Adsniper::Api::Models::Adcreative.new(api_key: MainHelper.api_key, parent: @campaign).create MainHelper.load_fixture(:adcreative)
-    @ad_statistics = Adsniper::Api::Models::Statistic.new(parent: @adcreative)
+    @adcreative = Mediasniper::Api::Models::Adcreative.new(api_key: MainHelper.api_key, parent: @campaign).create MainHelper.load_fixture(:adcreative)
+    @ad_statistics = Mediasniper::Api::Models::Statistic.new(parent: @adcreative)
   end
 
   after(:all) do

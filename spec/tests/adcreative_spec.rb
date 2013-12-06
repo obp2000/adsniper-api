@@ -1,10 +1,10 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::Adcreative do
+describe Mediasniper::Api::Models::Adcreative do
 
   before(:all) do
-    @campaign = Adsniper::Api::Models::Campaign.new(api_key: MainHelper.api_key).create MainHelper.load_fixture(:campaign)
-    @adcreatives = Adsniper::Api::Models::Adcreative.new(parent: @campaign)
+    @campaign = Mediasniper::Api::Models::Campaign.new(api_key: MainHelper.api_key).create MainHelper.load_fixture(:campaign)
+    @adcreatives = Mediasniper::Api::Models::Adcreative.new(parent: @campaign)
     @adcreatives.each(&:delete)
     @first = @adcreatives.first
   end

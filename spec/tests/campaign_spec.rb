@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::Campaign do
+describe Mediasniper::Api::Models::Campaign do
 
   before(:all) do
-    @campaigns = Adsniper::Api::Models::Campaign.new(api_key: MainHelper.api_key)
+    @campaigns = Mediasniper::Api::Models::Campaign.new(api_key: MainHelper.api_key)
     @campaigns.each(&:delete)
     @campaigns.create MainHelper.load_fixture(:campaign)
     @first = @campaigns.first

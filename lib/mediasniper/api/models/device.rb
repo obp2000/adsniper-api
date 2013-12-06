@@ -1,7 +1,7 @@
-module Adsniper
+module Mediasniper
   module Api
     module Models
-      class Rubric < Adsniper::Api::Abstract
+      class Device < Mediasniper::Api::Abstract
         def collection_method
           Hashie::Mash.new(@response)
         end

@@ -1,7 +1,7 @@
-module Adsniper
+module Mediasniper
   module Api
     module Models
-      class Account < Adsniper::Api::Abstract
+      class Account < Mediasniper::Api::Abstract
         @required_attributes = [:login, :email]
 
         def collection_method
@@ -13,11 +13,11 @@ module Adsniper
         end
 
         def sub_accounts
-          Adsniper::Api::Models::SubAccount.new(parent: self)
+          Mediasniper::Api::Models::SubAccount.new(parent: self)
         end
 
         def campaigns
-          Adsniper::Api::Models::Campaign.new(parent: self)
+          Mediasniper::Api::Models::Campaign.new(parent: self)
         end
       end
     end

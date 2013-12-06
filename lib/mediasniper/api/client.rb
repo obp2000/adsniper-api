@@ -1,5 +1,5 @@
 # coding: utf-8
-module Adsniper
+module Mediasniper
   module Api
     class Client
 
@@ -14,19 +14,19 @@ module Adsniper
       end
 
       def account
-        Adsniper::Api::Models::Account.new(hash_for_init).first
+        Mediasniper::Api::Models::Account.new(hash_for_init).first
       end
 
       def geo
-        Adsniper::Api::Models::Demographic.new(hash_for_init).all
+        Mediasniper::Api::Models::Demographic.new(hash_for_init).all
       end
 
       def devices
-        Adsniper::Api::Models::Device.new(hash_for_init).all
+        Mediasniper::Api::Models::Device.new(hash_for_init).all
       end
 
       def rubrics
-        Adsniper::Api::Models::Rubric.new(hash_for_init).all
+        Mediasniper::Api::Models::Rubric.new(hash_for_init).all
       end
 
       private

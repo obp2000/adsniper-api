@@ -1,9 +1,9 @@
 require "spec_helper"
 
-describe Adsniper::Api::Models::Demographic do
+describe Mediasniper::Api::Models::Demographic do
 
   before(:all) do
-    @demographics = Adsniper::Api::Models::Demographic.new(api_key: MainHelper.api_key)
+    @demographics = Mediasniper::Api::Models::Demographic.new(api_key: MainHelper.api_key)
   end
 
   it '#all' do

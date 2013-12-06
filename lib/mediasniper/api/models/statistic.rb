@@ -1,7 +1,7 @@
-module Adsniper
+module Mediasniper
   module Api
     module Models
-      class Statistic < Adsniper::Api::Abstract
+      class Statistic < Mediasniper::Api::Abstract
         PARENT_REQUIRED = true
         def collection_method
           Hashie::Mash.new(@response['statistic'])

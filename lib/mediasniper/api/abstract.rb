@@ -1,13 +1,13 @@
 # coding: utf-8
-module Adsniper
+module Mediasniper
   module Api
     class Abstract
       MAX_TIMEOUT = 30
 
-      include Adsniper::Api::Abstract::Helper
-      include Adsniper::Api::Abstract::Parent
-      include Adsniper::Api::Abstract::Collection
-      include Adsniper::Api::Abstract::Crud
+      include Mediasniper::Api::Abstract::Helper
+      include Mediasniper::Api::Abstract::Parent
+      include Mediasniper::Api::Abstract::Collection
+      include Mediasniper::Api::Abstract::Crud
 
       class << self
         attr_accessor :required_attributes, :all_attributes

@@ -1,10 +1,15 @@
-module Adsniper
+module Mediasniper
   module Api
     module Models
-      class Device < Adsniper::Api::Abstract
+      class Demographic < Mediasniper::Api::Abstract
         def collection_method
           Hashie::Mash.new(@response)
         end
+
+        def continents
+          ap all.keys
+        end
+
       end
     end
   end

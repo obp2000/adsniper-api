@@ -1,7 +1,7 @@
-module Adsniper
+module Mediasniper
   module Api
     module Models
-      class SubAccount < Adsniper::Api::Models::Account
+      class SubAccount < Mediasniper::Api::Models::Account
         PARENT_REQUIRED = true
         @required_attributes = [:login, :email]
 

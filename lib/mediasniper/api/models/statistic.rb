@@ -8,7 +8,7 @@ module Mediasniper
         end
 
         def default_url
-          "/#{parent_url}/#{entity_name}"
+          "#{parent_url}/#{entity_name}"
         end
       end
     end

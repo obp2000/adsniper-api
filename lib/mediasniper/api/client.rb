@@ -29,6 +29,18 @@ module Mediasniper
         Mediasniper::Api::Models::Rubric.new(hash_for_init).all
       end
 
+      def campaigns
+        Mediasniper::Api::Models::Campaign.new(hash_for_init).all
+      end
+
+      def campaign id
+        Mediasniper::Api::Models::Campaign.new(hash_for_init).read id
+      end
+
+      def statistic_for_campaign id
+        Mediasniper::Api::Models::Statistic.new(hash_for_init.merge({parent_url: "campaigns/#{id}"})).all
+      end
+
       private
 
       def hash_for_init

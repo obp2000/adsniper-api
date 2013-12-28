@@ -34,14 +34,17 @@ module Mediasniper
       end
 
       def campaign id
+        raise 'campaign id must be defined' unless id.present?
         Mediasniper::Api::Models::Campaign.new(hash_for_init).read id
       end
 
       def statistic_for_campaign id
+        raise 'campaign id must be defined' unless id.present?
         Mediasniper::Api::Models::Statistic.new(hash_for_init.merge({parent_url: "campaigns/#{id}"})).all
       end
 
       def create_campaign params
+        raise 'campaign params must be kind of Hash' unless params.present?
         Mediasniper::Api::Models::Campaign.new(hash_for_init).create params
       end
 

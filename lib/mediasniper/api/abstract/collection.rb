@@ -17,18 +17,19 @@ module Mediasniper
           end
         end
 
-        def all!
+        def all! params = nil
+          @_request = params unless params.nil?
           @_method  = :all
           request do
-            RestClient.get("#{@url}", params: {api_key: @api_key, limit: @limit, offset: @offset}, timeout: self.class::MAX_TIMEOUT)
+            RestClient.get("#{@url}", params: @_request.merge({api_key: @api_key, limit: @limit, offset: @offset}), timeout: self.class::MAX_TIMEOUT)
           end
           @_all = collection_method
           @update_all = false
           @_all
         end
 
-        def all
-          all! if @_all.nil? or @update_all == true
+        def all params = nil
+          all! params if @_all.nil? or @update_all == true
           @_all
         end
 

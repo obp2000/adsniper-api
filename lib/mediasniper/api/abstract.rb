@@ -20,6 +20,7 @@ module Mediasniper
 
         def check_attrs hash
           undefined_attrs = []
+          @required_attributes ||= []
           @required_attributes.each do |attribute|
             undefined_attrs << attribute unless hash.include? attribute
           end

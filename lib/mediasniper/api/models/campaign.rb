@@ -12,8 +12,8 @@ module Mediasniper
           Mediasniper::Api::Models::Adcreative.new(parent: self)
         end
 
-        def targetings
-          Mediasniper::Api::Models::Targeting.new(parent: self)
+        def targeting
+          Mediasniper::Api::Models::Targeting.new(parent: self).all
         end
 
         def parent_url

@@ -34,7 +34,7 @@ module Mediasniper
       end
 
       def campaign id
-        raise 'campaign id must be defined' unless id.present?
+        raise 'campaign id must be defined' if id.nil?
         Mediasniper::Api::Models::Campaign.new(hash_for_init).read id
       end
 

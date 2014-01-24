@@ -13,6 +13,10 @@ module Mediasniper
         account.sub_accounts.create(email: email, login: email, password: password)
       end
 
+      def sub_account id
+        account.sub_accounts.read id
+      end
+
       def account
         Mediasniper::Api::Models::Account.new(hash_for_init).first
       end

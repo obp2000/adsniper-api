@@ -16,6 +16,10 @@ module Mediasniper
           Mediasniper::Api::Models::Targeting.new(parent: self).all
         end
 
+        def create_targeting params = {}
+          Mediasniper::Api::Models::Targeting.new(parent: self).create params
+        end
+
         def parent_url
           ''
         end

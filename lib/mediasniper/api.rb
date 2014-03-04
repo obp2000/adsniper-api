@@ -17,6 +17,7 @@ require "mediasniper/api/models/device"
 require "mediasniper/api/models/rubric"
 require "mediasniper/api/models/targeting"
 require "mediasniper/api/models/statistic"
+require "mediasniper/api/models/adcreative_size"
 require "mediasniper/api/client"
 
 module Mediasniper

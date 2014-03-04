@@ -17,6 +17,10 @@ module Mediasniper
         account.sub_accounts.read id
       end
 
+      def update_sub_account
+        account.sub_accounts.update(email: email, login: email, password: password)
+      end
+
       def account
         Mediasniper::Api::Models::Account.new(hash_for_init).first
       end
@@ -35,6 +39,10 @@ module Mediasniper
 
       def campaigns
         Mediasniper::Api::Models::Campaign.new(hash_for_init).all
+      end
+
+      def creatives_kinds
+        Mediasniper::Api::Models::AdcreativeSize.new(hash_for_init).all
       end
 
       def campaign id
